@@ -1,0 +1,124 @@
+:root {
+    --primary: #180340;    
+    --secondary: #e6e6e6;  
+    --accent: #ffbd59;     
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary);
+    color: var(--secondary);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+    position: fixed;
+    top: 0; width: 100%;
+    padding: 1rem 10%;
+    display: flex; justify-content: space-between; align-items: center;
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 2rem; }
+.nav-links a { color: var(--secondary); text-decoration: none; transition: 0.3s; font-size: 0.9rem; text-transform: uppercase; }
+.nav-links a:hover { color: var(--accent); }
+
+.menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.menu-toggle span { width: 25px; height: 3px; background: var(--accent); border-radius: 50px; }
+
+/* --- Hero --- */
+.hero {
+    height: 100vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 0 10%;
+    background: radial-gradient(circle at center, #23065a 0%, #180340 100%);
+    position: relative; overflow: hidden;
+}
+
+/* Copie o restante dos seus estilos aqui dentro... */
+
+.whatsapp-float {
+    position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
+    background-color: #25d366; color: #FFF; border-radius: 50px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px; z-index: 1000; text-decoration: none;
+}
+
+.member-role {
+    font-size: 0.8rem;      /* Tamanho um pouco menor que o nome */
+    color: var(--accent);    /* Cor dourada para destacar */
+    opacity: 0.8;           /* Um pouco de transparência */
+    margin-top: 5px;        /* Espaço entre o nome e a função */
+    font-weight: 300;       /* Letra mais fininha */
+    text-transform: uppercase; /* Deixa tudo em maiúsculo (opcional) */
+    letter-spacing: 1px;    /* Espaçamento entre as letras */
+}
+
+/* --- FOOTER COMPLETO --- */
+footer {
+    background: #0c0220;
+    padding: 60px 10% 20px;
+    border-top: 1px solid var(--glass);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+.instagram-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.instagram-link:hover {
+    color: var(--accent);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--glass);
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
