@@ -115,6 +115,22 @@
         .card ul { list-style: none; }
         .card ul li { margin-bottom: 10px; font-size: 0.9rem; }
         .card ul li::before { content: "✦"; color: var(--accent); margin-right: 10px; }
+        /* 1. Faz a foto ter uma transição suave */
+.member-photo img {
+    transition: transform 0.5s ease;
+}
+ 
+/* 2. Efeito de subir o card e mudar a borda */
+.member-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 20px rgba(255, 189, 89, 0.1);
+}
+ 
+/* 3. Efeito de zoom na foto ao passar o mouse no card */
+.member-card:hover .member-photo img {
+    transform: scale(1.15);
+}
  
         /* --- Contato --- */
         #contato-form-section { padding: 100px 10%; background: var(--primary); }
@@ -236,12 +252,12 @@
 <div class="member-card">
 <div class="member-photo"><img src="foto-fernanda.jpg.jpeg" alt="Fernanda"></div>
 <div class="member-name">Fernanda Vitória</div>
-<div class="member-role">Desenvolvedora de Desktop</div>
+<div class="member-role">Desenvolvedora Desktop</div>
 </div>
 <div class="member-card">
 <div class="member-photo"><img src="foto-giovanna.jpg.jpeg" alt="Giovanna"></div>
 <div class="member-name">Giovanna Pereira</div>
-<div class="member-role">Designer UX</div>
+<div class="member-role">Designer UX e Project Manager</div>
 </div>
 <div class="member-card">
 <div class="member-photo"><img src="foto-maria.jpg.jpeg" alt="Maria Eduarda"></div>
